@@ -10,7 +10,7 @@
 
 .esindus.aktiivne {
     /* background: rgb(176, 174, 174); */
-    background-color: gray;
+    background-color: rgb(70, 67, 67);
 }
 
 .esindus::after {
@@ -22,4 +22,8 @@
 
 .esindus.aktiivne::after {
   content: ' ▴'; /* up arrow */
+}
+
+.kontakt-aadress.aktiivne {
+  font-weight: 600;
 }

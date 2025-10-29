@@ -13,12 +13,14 @@ function Kontakt() {
       <br />
 
       <div
-        className={`esindus ${n2itaTelKristiine ? "aktiivne" : ""}`}
+        className={`esindus ${n2itaTelKristiine ? "aktiivne" : undefined}`}
         onClick={() => muudaN2itaTelKristiine(!n2itaTelKristiine)}
       >
         Kristiine keskus
       </div>
-      <div>Endla 45</div>
+      <div
+        className={`kontakt-aadress ${n2itaTelKristiine ? "aktiivne" : undefined}`}
+      >Endla 45</div>
       {n2itaTelKristiine && <div>+372 12312312</div>}
 
       <br />
@@ -28,7 +30,9 @@ function Kontakt() {
         >
           Ülemiste keskus
       </div>
-      <div>Suur-Sõjamäe 4</div>
+      <div
+        className={`kontakt-aadress ${n2itaTelYlemiste ? "aktiivne" : ""}`}
+      >Suur-Sõjamäe 4</div>
       {n2itaTelYlemiste && <div>+372 12312313</div>}
 
       <br />
@@ -38,7 +42,9 @@ function Kontakt() {
       >
         Tasku keskus
       </div>
-      <div>Turu 2</div>
+      <div
+        className={`kontakt-aadress ${n2itaTelTasku ? "aktiivne" : ""}`}
+      >Turu 2</div>
       {n2itaTelTasku && <div>+372 12312314</div>}
     </div>
   );
