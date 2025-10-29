@@ -1,0 +1,25 @@
+.esindus {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background: #1a1a1a;
+    transition: background 0.3s;
+    padding: 0.3em 0.5em;
+    border-radius: 6px;
+}
+
+.esindus.aktiivne {
+    /* background: rgb(176, 174, 174); */
+    background-color: gray;
+}
+
+.esindus::after {
+  content: ' ▾';
+  font-size: 0.9em;
+  margin-left: 0.3em;
+  transition: transform 0.2s;
+}
+
+.esindus.aktiivne::after {
+  content: ' ▴'; /* up arrow */
+}
