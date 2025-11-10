@@ -2,6 +2,13 @@ import { useState } from "react";
 
 function Meist() {
   const [kontakt, setKontakt] = useState("");
+  const tootajad = [
+    {nimi: "Arvo Pärt", ala: "Uudisklippide taustamuusika", telefon: "+372 123123"},
+    {nimi: "Kelly Sildaru", ala: "Püstolreporter", telefon: "+372 123124"},
+    {nimi: "Edward von Lõngus", ala: "Uudiste kujundamine", telefon: "+372 123125"},
+    {nimi: "Kerli Kõiv", ala: "Välisturgude spetsialist", telefon: "+372 123126"},
+    {nimi: "Vaiko Eplik", ala: "Nooremarendaja", telefon: "+372 123127"},
+  ]
 
   function n2itaKontakt(e, kontakt) {
     e.stopPropagation();
@@ -14,30 +21,21 @@ function Meist() {
       <div>Meie töötajad:</div>
       <br />
 
-      <div>Arvo Pärt</div>
-      <div>Uudisklippide taustamuusika</div>
-      <button onClick={(e) => n2itaKontakt(e, "+372 123123")}>Võta ühendust</button>
-      <br />
-      <br />
+      <div>
+        {tootajad.map(tootaja =>
+          <div key={tootaja.nimi}>
+            <div>{tootaja.nimi}</div>
+            <div>{tootaja.ala}</div>
+            <button onClick={(e) => n2itaKontakt(e, tootaja.telefon)}>Võta ühendust</button>
+            <br />
+            <br />
+          </div>
+        )}
 
-      <div>Kelly Sildaru</div>
-      <div>Püstolreporter</div>
-      <button onClick={(e) => n2itaKontakt(e, "+372 123124")}>Võta ühendust</button>
-      <br />
-      <br />
+      </div>
 
-      <div>Edward von Lõngus</div>
-      <div>Uudiste kujundamine</div>
-      <button onClick={(e) => n2itaKontakt(e, "+372 123125")}>Võta ühendust</button>
       <br />
       <br />
-
-      <div>Kerli Kõiv</div>
-      <div>Välisturgude spetsialist</div>
-      <button onClick={(e) => n2itaKontakt(e, "+372 123126")}>Võta ühendust</button>
-      <br />
-      <br />
-
       {kontakt !== "" && <div>Tema kontakt: {kontakt}</div>}
     </div>
   );
