@@ -9,10 +9,12 @@ function Meist() {
     {nimi: "Kerli Kõiv", ala: "Välisturgude spetsialist", telefon: "+372 123126"},
     {nimi: "Vaiko Eplik", ala: "Nooremarendaja", telefon: "+372 123127"},
   ]
+  const [valitud, setValitud] = useState("");
 
-  function n2itaKontakt(e, kontakt) {
+  function n2itaKontakt(e, tootaja) {
     e.stopPropagation();
-    setKontakt(kontakt);
+    setKontakt(tootaja.telefon);
+    setValitud(tootaja.nimi);
   }
 
   return (
@@ -23,10 +25,10 @@ function Meist() {
 
       <div>
         {tootajad.map(tootaja =>
-          <div key={tootaja.nimi}>
+          <div key={tootaja.nimi} className={tootaja.nimi === valitud ? "valitud" : undefined}>
             <div>{tootaja.nimi}</div>
             <div>{tootaja.ala}</div>
-            <button onClick={(e) => n2itaKontakt(e, tootaja.telefon)}>Võta ühendust</button>
+            <button onClick={(e) => n2itaKontakt(e, tootaja)}>Võta ühendust</button>
             <br />
             <br />
           </div>
