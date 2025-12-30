@@ -18,7 +18,7 @@ function Meist() {
   }
 
   return (
-    <div onClick={() => setKontakt("")}>
+    <div onClick={() => setKontakt("")} style={{ margin: "20px 8px"}}>
       <div>See on meist leht, nähtav localhost:5173/meist aadressil</div>
       <div>Meie töötajad:</div>
       <br />

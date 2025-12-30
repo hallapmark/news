@@ -7,7 +7,7 @@ function Kontakt() {
   const [n2itaTelTasku, muudaN2itaTelTasku] = useState(false);
 
   return (
-    <div>
+    <div style={{ margin: "20px 8px"}}>
       <div>See on kontaktide leht, nähtav localhost:5173/kontakt aadressil</div>
       <div>Võta meiega ühendust:</div>
       <br />
