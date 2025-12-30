@@ -5,20 +5,14 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.valitud {
+  font-weight: 700;
 }
 
-.valitud {
+.field-label {
   font-weight: 700;
 }
