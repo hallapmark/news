@@ -9,6 +9,7 @@ import LisaUudis from './pages/LisaUudis'
 import { ToastContainer } from 'react-toastify'
 import HaldaUudiseid from './pages/HaldaUudised'
 import YksUudis from './pages/YksUudis'
+import MuudaUudis from './pages/MuudaUudis'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path='/lisa-uudis' element={ <LisaUudis /> } />
         <Route path="/halda-uudiseid" element={ <HaldaUudiseid /> } />
         <Route path="/uudis/:index" element={ <YksUudis /> } />
+        <Route path="/muuda/:index" element={ <MuudaUudis /> } />
       </Routes>
       <ToastContainer />
     </>
