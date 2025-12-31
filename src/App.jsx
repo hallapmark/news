@@ -7,10 +7,9 @@ import Kontakt from './pages/Kontakt/Kontakt'
 import Meist from './pages/Meist'
 import LisaUudis from './pages/LisaUudis'
 import { ToastContainer } from 'react-toastify'
+import HaldaUudiseid from './pages/HaldaUudised'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
       <Link to="/">
@@ -34,6 +33,7 @@ function App() {
         <Route path='/kontakt' element={ <Kontakt /> } />
         <Route path='/meist' element={ <Meist /> } />
         <Route path='/lisa-uudis' element={ <LisaUudis /> } />
+        <Route path="/halda-uudiseid" element={ <HaldaUudiseid /> } />
       </Routes>
       <ToastContainer />
     </>
